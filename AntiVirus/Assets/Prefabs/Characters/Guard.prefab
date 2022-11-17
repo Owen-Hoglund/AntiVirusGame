@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6824556353320291503}
   m_Layer: 0
   m_Name: Guard
-  m_TagString: Untagged
+  m_TagString: Guard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,7 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d8cab484cf09ab419352df71ac5ff29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverHeight: 0
-  hoverForce: 0
-  maxVelocity: 0
-  checkPoints: []
+  hoverHeight: 3
+  hoverForce: 3
+  maxVelocity: 1
+  acceleration: 1
+  index: 0
+  checkpoints: []
