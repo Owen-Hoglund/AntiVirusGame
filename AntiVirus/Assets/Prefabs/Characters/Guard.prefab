@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 548460347524958}
   - component: {fileID: 862675667349230152}
   - component: {fileID: 3169979254631433993}
-  - component: {fileID: 3363998864781878081}
+  - component: {fileID: 6824556353320291503}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Untagged
@@ -115,7 +115,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3363998864781878081
+--- !u!114 &6824556353320291503
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,6 +124,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4637062382820131872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b6442bdd129b045808a19a4e9efbbc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d8cab484cf09ab419352df71ac5ff29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverHeight: 0
+  hoverForce: 0
+  maxVelocity: 0
+  checkPoints: []

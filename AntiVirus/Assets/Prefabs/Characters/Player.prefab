@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 4497910273030150376}
   - component: {fileID: 1303312345726461918}
   - component: {fileID: 3940574001310693512}
-  - component: {fileID: 7789318918504384339}
+  - component: {fileID: 2145579168103392902}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -252,7 +252,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2170590714585244916}
   m_Enabled: 1
---- !u!114 &7789318918504384339
+--- !u!114 &2145579168103392902
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -261,11 +261,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2170590714585244916}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc03c6431c564234e920a2db8ab1ed8e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b9489820242e914095503b974ed51ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 1000
-  playerBody: {fileID: 3159282697623796390}
+  playerBody: {fileID: 0}
 --- !u!1 &4548001238928060179
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,8 +276,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3159282697623796390}
   - component: {fileID: 5444524520838938168}
-  - component: {fileID: 8237445157300625095}
-  - component: {fileID: 2230833893877964354}
+  - component: {fileID: 4668970931948722477}
+  - component: {fileID: 8680397113067263387}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -320,7 +320,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8237445157300625095
+--- !u!114 &4668970931948722477
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -329,18 +329,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 4548001238928060179}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef2f0f4786383d44ea5c3c506aa4d026, type: 3}
+  m_Script: {fileID: 11500000, guid: ae72bed1570f71f4985ceb2281cb4530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 5444524520838938168}
-  groundCheck: {fileID: 1732390513389155485}
+  controller: {fileID: 0}
+  groundCheck: {fileID: 0}
   groundDistance: 0.3
   groundMask:
     serializedVersion: 2
     m_Bits: 0
   speed: 10
   gravity: -9.81
---- !u!114 &2230833893877964354
+--- !u!114 &8680397113067263387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -349,12 +349,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4548001238928060179}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1450829b5ef7b5f45a97ac46e470af47, type: 3}
+  m_Script: {fileID: 11500000, guid: a74f28ca996e2c9408d29767017606da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origin: {fileID: 4497910273030150376}
-  reticle: {fileID: 5920960519266347341}
-  laserRange: 10
+  origin: {fileID: 0}
+  reticle: {fileID: 0}
+  laserRange: 0
 --- !u!1 &6244971022302524559
 GameObject:
   m_ObjectHideFlags: 0
