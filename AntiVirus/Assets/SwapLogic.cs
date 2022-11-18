@@ -9,14 +9,16 @@ public class SwapLogic : MonoBehaviour
     private GameObject currentDecoy;
     private GameObject realGuard;
     public float swaptime;
-    private float timeRemaining;
-    public bool swapped = false; // CHange to private later
+    public float timeRemaining;
+    private bool swapped = false; // CHange to private later
 
-
+    void Start(){
+        timeRemaining = swaptime;
+    }
     public void swap(GameObject guard){
         realGuard = guard;
         mainPlayer.GetComponentInChildren<Camera>().enabled = false;
-        mainPlayer.GetComponent<PlayerGuardController>().enabled = false;
+        mainPlayer.GetComponent<PlayerController>().enabled = false;
         
         Vector3 location = realGuard.transform.position;
         guard.gameObject.SetActive(false);
@@ -28,7 +30,7 @@ public class SwapLogic : MonoBehaviour
         currentDecoy.SetActive(false);
         realGuard.SetActive(true);
         mainPlayer.GetComponentInChildren<Camera>().enabled = true;
-        mainPlayer.GetComponent<PlayerGuardController>().enabled = true;
+        mainPlayer.GetComponent<PlayerController>().enabled = true;
         Destroy(currentDecoy);
     }
 

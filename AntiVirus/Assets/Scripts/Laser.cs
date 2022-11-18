@@ -14,18 +14,20 @@ public class Laser : MonoBehaviour
             Debug.DrawRay(origin.position, (reticle.position - origin.position) * laserRange, Color.red, 1);
             if (Physics.Raycast(origin.position, reticle.position - origin.position, out hit, laserRange)){
                 if (hit.transform.tag == "Guard"){
-                    Debug.Log("Hit a guard");
+                    Debug.Log("Stunned Guard");
+                    hit.transform.SendMessage("stun");
                 }
             }
         } else if (Input.GetMouseButtonDown(1)){
             Debug.Log("Fired Swap Laser");
-                RaycastHit hit;
-                if (Physics.Raycast(origin.position, reticle.position - origin.position, out hit, laserRange)){
-                    if (hit.transform.tag == "Guard"){
-                        Debug.Log("Hit a guard");
-                        manager.SendMessage("swap", hit.transform.gameObject);
-                    }
+            RaycastHit hit;
+            Debug.DrawRay(origin.position, (reticle.position - origin.position) * laserRange, Color.red, 1);
+            if (Physics.Raycast(origin.position, reticle.position - origin.position, out hit, laserRange)){
+                if (hit.transform.tag == "Guard"){
+                    Debug.Log("Hit a guard");
+                    manager.SendMessage("swap", hit.transform.gameObject);
                 }
+            }
             }
         }
 }

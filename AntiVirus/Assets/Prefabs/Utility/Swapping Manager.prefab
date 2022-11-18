@@ -46,3 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainPlayer: {fileID: 0}
   decoyGuard: {fileID: 3369385809511086392, guid: 491b4c585ba746b40802170cdbf2146f, type: 3}
+  swaptime: 5
+  swapped: 0
