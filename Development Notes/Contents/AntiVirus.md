@@ -1,0 +1,3 @@
+Antivirus is a game I am making to learn the Unity game engine and use as a demo for job applications if I apply for work in development. For anyone besides me looking at these notes, they would be best opened in Obsidian Notes. 
+
+Despite the name, in AntiVirus you play as a computer virus. The end goal being to destroy the computer that you have invaded. Ultimately meant to be a puzzle game, in which you have to avoid and overcome antivirus software. 

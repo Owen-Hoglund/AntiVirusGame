@@ -1,0 +1,166 @@
+{
+  "main": {
+    "id": "2be60c03ef47ac57",
+    "type": "split",
+    "children": [
+      {
+        "id": "3c04c2909fa44041",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e29753e88942196b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Table of Contents.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1d9167b3ef4cd148",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Floors, Walls. and Ceilings.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "da766af62f8a13cb",
+    "type": "split",
+    "children": [
+      {
+        "id": "2b709fa1ef047995",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b647fced2034e8cf",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byModifiedTimeReverse"
+              }
+            }
+          },
+          {
+            "id": "2699976973e04f8e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f9fc081fabbee7cc",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e78a9ce3fe0662e0",
+    "type": "split",
+    "children": [
+      {
+        "id": "15ede29ef4e53533",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a1c4951fc1fdab92",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Floors, Walls. and Ceilings.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6d89005a0c8297b4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Floors, Walls. and Ceilings.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b73eef7a2e2e46ed",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "f493530e50df14c5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Floors, Walls. and Ceilings.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "1d9167b3ef4cd148",
+  "lastOpenFiles": [
+    "Structural Environmental Elements.md",
+    "Contents/Elements/Environment Elements/Environment Elements.md",
+    "Contents/Elements/Elements.md",
+    "Contents/Elements/Utility Elements/Utility Elements.md",
+    "Floors, Walls. and Ceilings.md",
+    "Table of Contents.md",
+    "Contents/AntiVirus.md",
+    "To do list.md",
+    "Contents/Contents.md",
+    "Contents/Scenes/Scenes.md"
+  ]
+}

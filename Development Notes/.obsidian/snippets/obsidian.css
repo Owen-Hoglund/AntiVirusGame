@@ -1,0 +1,38 @@
+/*for "Source mode" and "Live Preview"*/
+
+.cm-header-1{
+    color:#829fd4;
+  }
+.cm-header-2{
+    color:#b978df;
+  }
+.cm-header-3{
+    color:#5ec0b3b4;
+  }
+.cm-header-4{
+color:#b6e0db;
+}
+
+
+
+
+
+/*for "Source mode"*/
+
+.markdown-preview-view h1{
+    color:#829fd4;
+  }
+.markdown-preview-view h2{
+    color:#b978df;
+  }
+.markdown-preview-view h3{
+    color:#5ec0b3b4;
+  }
+.markdown-preview-view h4{
+    color:#b6e0db;
+}
+
+.cm-strong,
+.markdown-preview-section strong {
+  color: #ff6c6c !important;
+}
