@@ -25,22 +25,23 @@ public class PlayerController : MonoBehaviour
     private void move(){
         // Forward / backward movement
         if (Input.GetKey("w")){
-            rb.AddForce(new Vector3(cam.transform.forward.x, 0, cam.transform.forward.z) * 10, ForceMode.Acceleration);
+            rb.velocity += new Vector3(cam.transform.forward.x, 0, cam.transform.forward.z) * maxVelocity;
         } 
         else if (Input.GetKey("s")){
-            rb.AddForce(new Vector3(cam.transform.forward.x, 0, cam.transform.forward.z) * -10, ForceMode.Acceleration);
+            rb.velocity += new Vector3(cam.transform.forward.x, 0, cam.transform.forward.z) * -maxVelocity;
         }
 
         // Left / Right movement
         if (Input.GetKey("a")){
-            rb.AddForce(-cam.transform.right * 10, ForceMode.Acceleration);
+            rb.velocity += (-cam.transform.right) * maxVelocity;
         } else if (Input.GetKey("d")){
-            rb.AddForce(cam.transform.right * 10, ForceMode.Acceleration);
+            rb.velocity += (cam.transform.right) * maxVelocity;
         }
         // Rapid slowdown if not actively accelerating
         if (!Input.GetKey("w")  && !Input.GetKey("a") &&!Input.GetKey("s")  && !Input.GetKey("d") && rb.velocity.magnitude > 0.1){
             rb.velocity = new Vector3(rb.velocity.x * 0.1f, rb.velocity.y, rb.velocity.z * 0.1f);
         }
+
         // Cap our velocity by max speed
         float xzVelocity = Mathf.Sqrt((rb.velocity.x) * (rb.velocity.x) + (rb.velocity.z) * (rb.velocity.z));
         if(xzVelocity > maxVelocity){

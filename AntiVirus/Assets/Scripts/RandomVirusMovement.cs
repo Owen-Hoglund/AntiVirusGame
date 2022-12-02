@@ -15,6 +15,10 @@ public class RandomVirusMovement : MonoBehaviour
         int randx = Random.Range(-1, 1);
         int randy = Random.Range(-1, 1);
         int randz = Random.Range(-1, 1);
+
+        randomness = Random.Range(1, 5);
+        maxVelocity = Random.Range(1, 10);
+
         rb.velocity = new Vector3(randx, randy, randz) * maxVelocity;
     }
 

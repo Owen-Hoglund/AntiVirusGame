@@ -6,6 +6,7 @@
       {
         "id": "3c04c2909fa44041",
         "type": "tabs",
+        "dimension": 74.49238578680203,
         "children": [
           {
             "id": "e29753e88942196b",
@@ -13,26 +14,32 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Table of Contents.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1d9167b3ef4cd148",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Floors, Walls. and Ceilings.md",
+                "file": "To do list.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
+      },
+      {
+        "id": "721cd1d20c6e9971",
+        "type": "tabs",
+        "dimension": 25.50761421319797,
+        "children": [
+          {
+            "id": "c544d6844fb334a5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tags.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -61,10 +68,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#edit",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
@@ -78,8 +85,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -99,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Floors, Walls. and Ceilings.md",
+                "file": "To do list.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,20 +122,9 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Floors, Walls. and Ceilings.md",
+                "file": "To do list.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "b73eef7a2e2e46ed",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
               }
             }
           },
@@ -139,28 +134,40 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Floors, Walls. and Ceilings.md"
+                "file": "To do list.md"
+              }
+            }
+          },
+          {
+            "id": "9245e6a6b614c77a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "1d9167b3ef4cd148",
+  "active": "e29753e88942196b",
   "lastOpenFiles": [
-    "Structural Environmental Elements.md",
-    "Contents/Elements/Environment Elements/Environment Elements.md",
-    "Contents/Elements/Elements.md",
-    "Contents/Elements/Utility Elements/Utility Elements.md",
-    "Floors, Walls. and Ceilings.md",
-    "Table of Contents.md",
-    "Contents/AntiVirus.md",
+    "Tags.md",
     "To do list.md",
-    "Contents/Contents.md",
-    "Contents/Scenes/Scenes.md"
+    "Ideas and Features Workshop.md",
+    "Contents/Scenes/Story Board.md",
+    "The Watcher.md",
+    "Contents/Scenes/Scenes.md",
+    "Table of Contents.md",
+    "Contents/Elements/Environment Elements/Structural Environmental Elements/Structural Environmental Elements.md",
+    "Contents/Elements/Elements.md",
+    "Contents/Elements/Environment Elements/Environment Elements.md"
   ]
 }

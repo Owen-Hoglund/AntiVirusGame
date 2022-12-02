@@ -10,12 +10,13 @@ public class SwapLogic : MonoBehaviour
     private GameObject realGuard;
     public float swaptime;
     public float timeRemaining;
-    private bool swapped = false; // CHange to private later
+    private bool swapped = false;
 
     void Start(){
         timeRemaining = swaptime;
     }
     public void swap(GameObject guard){
+        Debug.Log("Swap initiated");
         realGuard = guard;
         mainPlayer.GetComponentInChildren<Camera>().enabled = false;
         mainPlayer.GetComponent<PlayerController>().enabled = false;
