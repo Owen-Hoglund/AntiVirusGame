@@ -11,25 +11,31 @@ public class guardController : MonoBehaviour
     public List<GameObject> checkpoints;
     public float stunTime;
     private float stunTimeLeft;
-    
+    [SerializeField] private bool lockedOnPlayer;
+    [SerializeField] private GameObject player;
+    private Vector3 direction;
 
     private Vector3 destination;
     private Rigidbody self;
     private bool active = true;
 
     void Start(){
+        lockedOnPlayer = false;
         stunTimeLeft = stunTime;
         self = gameObject.GetComponent<Rigidbody>();
         if (checkpoints.Count != 0){
             destination = checkpoints[index % checkpoints.Count].transform.position;
+        } else {
+            destination = transform.position;
         }
 
     }
     void Update()
     {
-        if (checkpoints.Count != 0 && active){
-            move();
-        }
+        // if (checkpoints.Count != 0 && active){
+        //     move();
+        // }
+        move();
         if (!active){countDown();}
     }
     void FixedUpdate(){
@@ -60,11 +66,21 @@ public class guardController : MonoBehaviour
 
     private void move(){
         Rigidbody self = gameObject.GetComponent<Rigidbody>();
-        Vector3 direction = Vector3.Normalize(destination - transform.position);
-
+        if (lockedOnPlayer){
+            direction = Vector3.Normalize(player.transform.position - transform.position);
+        } else{
+            direction = Vector3.Normalize(destination - transform.position);
+        }
+        
         // Accelerates towards the current checkpoint then checks its velocity
         // if the velocity is higher than the max we restrict it to our max velocity while retaining its direction
-        self.AddForce(direction, ForceMode.Acceleration);
+        if (Vector3.Distance(transform.position, destination) > 3){
+            // Orients the rigidbody towards its current velocity
+            transform.LookAt(transform.position + self.velocity);
+            self.AddForce(direction, ForceMode.Acceleration);
+        } else {
+            self.velocity = self.velocity * (float)0.5;
+        }
         if (self.velocity.magnitude > maxVelocity){
             self.velocity = Vector3.Normalize(self.velocity) * maxVelocity;
         }
@@ -91,7 +107,14 @@ public class guardController : MonoBehaviour
         }
     }
 
-    // private void slowdown(){
-    //     self.velocity = self.velocity * 0.9f;
-    // }
+    public void lockOnPlayer(GameObject detectedPlayer){
+        Debug.Log("Locked on Player");
+        player = detectedPlayer;
+        lockedOnPlayer = true;
+    }
+
+    public void loseLock(){
+        lockedOnPlayer = false;
+        player = null;
+    }
 }

@@ -7,7 +7,6 @@ public class BridgeControl : MonoBehaviour
     public float length;
     private float remainder;
     public float speed;
-    private float trueSpeed;
     private bool building = false;
     private bool built = false;
 
@@ -15,7 +14,6 @@ public class BridgeControl : MonoBehaviour
     void Start()
     {
         remainder = length;
-        trueSpeed = speed / 100;
     }
 
     // Update is called once per frame
@@ -28,13 +26,13 @@ public class BridgeControl : MonoBehaviour
 
     private void extendAndRetract(){
         if (built){
-            transform.position -= new Vector3(0, 0, trueSpeed / 2);
-            transform.localScale -= new Vector3(0, 0, trueSpeed);
-            remainder -= trueSpeed;
+            transform.position -= new Vector3(0, 0, speed * Time.deltaTime);
+            transform.localScale -= new Vector3(0, 0, speed * Time.deltaTime);
+            remainder -= speed * Time.deltaTime;
         } else {
-            transform.position += new Vector3(0, 0, trueSpeed / 2);
-            transform.localScale += new Vector3(0, 0, trueSpeed);
-            remainder -= trueSpeed;
+            transform.position += new Vector3(0, 0, speed * Time.deltaTime / 2);
+            transform.localScale += new Vector3(0, 0, speed * Time.deltaTime);
+            remainder -= speed * Time.deltaTime;
         }
 
         if (remainder < 0){

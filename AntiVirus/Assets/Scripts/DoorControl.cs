@@ -4,54 +4,70 @@ using UnityEngine;
 
 public class DoorControl : MonoBehaviour
 {
-    // Choose starting position and speed
-    public bool startsOpen;
     public float speed;
+    public GameObject PortManager;
 
     // Private variables
     private bool isOpen;
     private bool underway;
-    private Vector3 openPosition;
-    private Vector3 closedPosition;
+    private float OriginalScale;
+    
+
     void Start(){
-        // Initializes values based on whether the door is starting open or closed
-        if (startsOpen){
-            isOpen = true;
-            openPosition = transform.position;
-            closedPosition = transform.position + new Vector3(0, transform.localScale.y);
-        } else {
-            isOpen = false;
-            openPosition = transform.position - new Vector3(0, transform.localScale.y);
-            closedPosition = transform.position;
-        }
+        OriginalScale = gameObject.transform.localScale.y;
         underway = false;
+        isOpen = false;
     }
     void Update()
     {
-        if (underway){
-            move();
-        }
+        if (underway){move();}
     }
-
-    public void openOrClose(){
-        underway = !underway;
+    public void interact(){
+        Debug.Log("Received Message");
+        if (!underway){
+            Debug.Log("Moving Door");
+            underway = true;
+        }
     }
 
     private void move(){
+        Debug.Log("Moving");
         if (isOpen){
-            transform.position = Vector3.MoveTowards(transform.position, closedPosition, speed/100);
-            if (transform.position == closedPosition){
-                Debug.Log("Door Closed");
-                isOpen = !isOpen;
-                underway = !underway;
-            }
-        } else{
-            transform.position = Vector3.MoveTowards(transform.position, openPosition, speed/100);
-            if (transform.position == openPosition){
-                Debug.Log("Door Open");
-                isOpen = !isOpen;
-                underway = !underway;
+            Debug.Log("Closing");
+            close();
+        } else {
+            Debug.Log("Opening");
+            open();
+        }
+    }
+
+    private void open(){
+        gameObject.transform.position += new Vector3(0, speed * Time.deltaTime, 0);
+        gameObject.transform.localScale -= new Vector3(0, speed * 2 * Time.deltaTime, 0);
+        if (gameObject.transform.localScale.y < 0){
+            isOpen = true;
+            underway = false;
+            gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x, 0, gameObject.transform.localScale.z);
+            if (PortManager != null){
+                PortManager.SendMessage("done");
             }
         }
+    }
+    private void close(){
+        Debug.LogFormat("Current Scale = {0} \n OriginalScale = {1}", gameObject.transform.localScale.y, OriginalScale);
+        gameObject.transform.position -= new Vector3(0, speed * Time.deltaTime, 0);
+        gameObject.transform.localScale += new Vector3(0, speed * 2 * Time.deltaTime, 0);
+        if (gameObject.transform.localScale.y > OriginalScale){
+            isOpen = false;
+            underway = false;
+            gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x, OriginalScale, gameObject.transform.localScale.z);
+            if (PortManager != null){
+                PortManager.SendMessage("next");
+            }
+        }
+    }
+
+    public bool getOpen(){
+        return isOpen;
     }
 }

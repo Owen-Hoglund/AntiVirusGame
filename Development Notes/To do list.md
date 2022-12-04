@@ -1,19 +1,25 @@
 
 ## High Importance
 - [x] Seems that movement is baked into framerate right now, this needs to be changed asap
-- [ ] Ensure that Guard movement, door movement, bridge movement are all framerate independent
+- [x] Ensure that Guard movement, door movement, bridge movement are all framerate independent
+	- [x] guard movement
+	- [x] door movement
+	- [x] bridge movement
 - [ ] Guard 
 	- [ ] player detection
 	- [ ] player following
 	- [ ] return to path algorithm implementation
-- [ ] Move away from Hovering for player movement
+- [ ] Player Movement
+	- [ ] Move away from hovering
+	- [ ] Add jump capability
 - [ ] Optimize rendering
 	- [ ] Deactivate anything that isnt close
-	- [ ] Change DoorPort logic to activate/deactivate as you move through them easy fix #feature 
+	- [x] Change DoorPort logic to activate/deactivate as you move through them easy fix #feature 
 	- [ ] Lighting
 		- [ ] Lightmapping
 		- [ ] Baked in lights?
-	- [ ] 
+- [ ] Learn about Async await task etc
+- [ ] Ensure all physics are happening in FixedUpdate
 
 ## Low Importance
 - [ ] Remove sphere reticle and replace it with an actual reticle
@@ -28,7 +34,8 @@
 	- [ ] Give it some lights to cycle through
 - [ ] Give the stun gun permanent destruction capability
 - [ ] Make Spotlight in blender
-
+- [ ] Make the camera zoom to target on body switch
+- [ ] Ensure Async Tasks are cancelled on Quit
 
 ## Future Maybes
 - [ ] Animations
