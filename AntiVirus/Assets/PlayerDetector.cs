@@ -2,19 +2,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Threading.Tasks;
+using System.Threading.Tasks; 
+using System.Threading;
 
 public class PlayerDetector : MonoBehaviour
 {
-    private GameObject player;
-    private bool playerInSight;
-    private int timer; // Number of seconds since the guard last saw the player
+    [SerializeField] private GameObject player;
+    private bool playerInSight = false;
+    [SerializeField] private int timer; // Number of seconds since the guard last saw the player
     [SerializeField] private int timeUntilLost; // How long a player must be out of sight before the guard loses track
     [SerializeField] private float trackingRange; // How far the guard can see AFTER the player was detected in its visible range
-    
-    Action onClickDelegate;
-    void Start(){
+
+    void OnApplicationQuit(){
+        // This is a very unsophisticated way of ensuring that tracking thread ends before play
         playerInSight = false;
+        System.Threading.Thread.Sleep(1500);
     }
 
     /*
@@ -27,9 +29,11 @@ public class PlayerDetector : MonoBehaviour
         if(!playerInSight){    
         RaycastHit hit;
         if (Physics.Raycast(transform.parent.transform.position, collider.transform.position - transform.parent.transform.position, out hit, 8)){
-            // Debug.DrawRay(transform.parent.transform.position, (collider.transform.position - transform.parent.transform.position), Color.green, 1);
+            Debug.DrawRay(transform.parent.transform.position, (collider.transform.position - transform.parent.transform.position), Color.green, 1);
             if (hit.transform.tag == "Player"){
-                gameObject.GetComponentInParent<guardController>().lockOnPlayer(collider.gameObject);
+                Debug.Log("Sending message to Target Manager that a player was detected");
+                gameObject.GetComponentInParent<TargetManager>().LockOnPlayer(hit.transform.gameObject);
+                // gameObject.GetComponentInParent<guardController>().lockOnPlayer(collider.gameObject);
                 player = hit.transform.gameObject;
                 playerInSight = true;
                 tracking();
@@ -60,7 +64,10 @@ public class PlayerDetector : MonoBehaviour
             // Waits one second so that we arent needlessly casting rays around
             await Task.Run(() => System.Threading.Thread.Sleep(1000));
             if (timer == timeUntilLost){
+                timer = 0;
+                Debug.Log("Lost Player - Sending Message to Target Manager to Lose Lock on Player");
                 playerInSight = false;
+                gameObject.GetComponentInParent<TargetManager>().LoseLock();
             }
             // Debug.LogFormat("\nTime since last seen: {0} \nTime until Lost: {1}", timer, timeUntilLost - timer);
         }

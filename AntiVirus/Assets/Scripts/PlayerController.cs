@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
         move();
     }
     void FixedUpdate(){
-        hover();
+        //hover();
     }
     private void move(){
         // Forward / backward movement
