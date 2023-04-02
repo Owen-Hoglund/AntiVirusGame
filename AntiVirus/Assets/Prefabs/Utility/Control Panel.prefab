@@ -515,7 +515,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7119813602360037598}
-  - component: {fileID: 522222885524670269}
   - component: {fileID: 5113854876948309242}
   m_Layer: 2
   m_Name: Control Panel
@@ -540,21 +539,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &522222885524670269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2369278532951395102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fad114014deec624db399ac92524dc62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectOfInteraction: {fileID: 0}
-  functionToCall: 
-  accessTags: []
 --- !u!65 &5113854876948309242
 BoxCollider:
   m_ObjectHideFlags: 0

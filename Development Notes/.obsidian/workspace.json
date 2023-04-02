@@ -6,7 +6,7 @@
       {
         "id": "3c04c2909fa44041",
         "type": "tabs",
-        "dimension": 74.49238578680203,
+        "dimension": 73.44782034346103,
         "children": [
           {
             "id": "e29753e88942196b",
@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Guard.md",
+                "file": "To do list.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
       {
         "id": "721cd1d20c6e9971",
         "type": "tabs",
-        "dimension": 25.50761421319797,
+        "dimension": 26.552179656538968,
         "children": [
           {
             "id": "c544d6844fb334a5",
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Guard.md",
+                "file": "To do list.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Guard.md",
+                "file": "To do list.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Guard.md"
+                "file": "To do list.md"
               }
             }
           },
@@ -159,15 +159,15 @@
   },
   "active": "e29753e88942196b",
   "lastOpenFiles": [
+    "To-Do Archived.md",
     "To do list.md",
-    "Guard.md",
-    "NPCS.md",
-    "Contents/Elements/Elements.md",
-    "Tags.md",
+    "Contents/NPCs/NPCs.md",
     "Ideas and Features Workshop.md",
-    "Contents/Scenes/Story Board.md",
-    "The Watcher.md",
-    "Contents/Scenes/Scenes.md",
-    "Table of Contents.md"
+    "Images/Pasted image 20221205143634.png",
+    "Contents/NPCs/The Watcher.md",
+    "Table of Contents.md",
+    "Contents/Elements/Elements.md",
+    "Contents/NPCs/Guard.md",
+    "Tags.md"
   ]
 }

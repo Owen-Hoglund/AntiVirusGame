@@ -3,7 +3,7 @@
 1. [[Environment Elements]]
 2. [[Utility Elements]]
 3. [[Playable Characters]]
-4. [[NPCS]]
+4. [[NPCs]]
 5. [[Scripts]]
 6. [[Materials]]
 

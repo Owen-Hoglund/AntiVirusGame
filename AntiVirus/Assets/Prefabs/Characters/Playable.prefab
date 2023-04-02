@@ -131,7 +131,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 7908294627518797754}
   hoverHeight: 3
-  speed: 0
   maxVelocity: 0
 --- !u!1 &3109208178016193957
 GameObject:
@@ -144,7 +143,7 @@ GameObject:
   - component: {fileID: 7913034730421988952}
   - component: {fileID: 8902500916085502938}
   - component: {fileID: 7534305145459151610}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Reticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +228,7 @@ GameObject:
   - component: {fileID: 3118276524507622050}
   - component: {fileID: 6505162981540498596}
   - component: {fileID: 8502266413056767438}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
