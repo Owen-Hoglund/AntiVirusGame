@@ -1,0 +1,22 @@
+- [x] Seems that movement is baked into framerate right now, this needs to be changed asap
+- [x] Ensure that Guard movement, door movement, bridge movement are all framerate independent
+	- [x] guard movement
+	- [x] door movement
+	- [x] bridge movement
+- [x] Guard 
+	- [x] lockrotation on xz so that it can only look forward
+	- [x] player detection
+	- [x] player following
+	- [x] return to path algorithm implementation
+	- [x] Stun
+- [x] **Player Movement**
+	- [x] Move away from hovering
+	- [x] Add jump capability
+	- [x] Add a bit of spring to landing
+	- [x] SPRINT
+- [x] Deactivate anything that isnt close
+- [x] Change DoorPort logic to activate/deactivate as you move through them easy fix #feature 
+- [x] Learn about Async await task etc
+- [x] Ensure all physics are happening in FixedUpdate #ongoing
+- [x] Fix ugly door logic
+	- [x] Best Solution is likely to take a lesson from the bridge and have it shrink upward, that way we dont have to have an offset for the door to sink into
